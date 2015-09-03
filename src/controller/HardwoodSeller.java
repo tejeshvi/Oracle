@@ -48,6 +48,7 @@ public class HardwoodSeller {
 		
 		try
 		{
+			/* Using StringTokenizer*/
 			br= new BufferedReader(new FileReader(inputFilePath));
 			line1=br.readLine();
 			line2=br.readLine();
@@ -83,12 +84,16 @@ public class HardwoodSeller {
 					feet=Integer.parseInt(stringToken3.nextElement().toString());
 					//System.out.println(hardWoodType+"    "+feet);
 					WoodItem wi=new WoodItem();
+					/* Calculating price, base delivery time with respect to the hard wood type */
 					price=wi.getPrice(hardWoodType)*(double)feet;
 					baseDeliveryTime=wi.getBaseDeliveryTime(hardWoodType);
 					HardwoodSeller hws1=new HardwoodSeller();
 					deliveryTime=hws1.deliveryTime(baseDeliveryTime, feet);
 					System.out.println(hardWoodType+"\t\t"+feet+"\t\t"+price);
 				}
+				
+				/* Calculating total price of the full order */
+				/* Calculating estimated delivery time */
 				
 				totalPrice=totalPrice+price;
 				if(estimatedDeliveryTime<deliveryTime)
@@ -107,7 +112,7 @@ public class HardwoodSeller {
 			e.printStackTrace();
 		}
 	}
-	
+	/* Calculates deliver time needed to delivery particular feet of wood */
 	public Double deliveryTime(Double baseDeliveryTime, int feet){
 		
 		Double deliveryETA = 0.0;
