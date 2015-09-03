@@ -28,9 +28,9 @@ public class WoodItem {
 	 * @param daseDeliveryTime base delivery time
 	 * @param price price per Bare Foot
 	 */
-	public WoodItem(String type, Double daseDeliveryTime, Double price) {
+	public WoodItem(String type, Double baseDeliveryTime, Double price) {
 		this.type = type;
-		this.baseDeliveryTime = daseDeliveryTime;
+		this.baseDeliveryTime = baseDeliveryTime;
 		this.price = price;
 	}
 
@@ -48,7 +48,19 @@ public class WoodItem {
 	 * 
 	 * @return the baseDeliverytime
 	 */
-	public Double getDaseDeliveryTime() {
+	public Double getBaseDeliveryTime(String hardWoodType) {
+		if(hardWoodType.equals("Cherry"))
+			baseDeliveryTime=2.5;
+		else if(hardWoodType.equals("Curly Maple"))
+			baseDeliveryTime=1.5;
+		else if(hardWoodType.equals("Genuine Mahogany"))
+			baseDeliveryTime=3.0;
+		else if(hardWoodType.equals("Wenge"))
+			baseDeliveryTime=5.0;
+		else if(hardWoodType.equals("White Oak"))
+			baseDeliveryTime=2.3;
+		else if(hardWoodType.equals("Sawdust"))
+			baseDeliveryTime=1.0;
 		return baseDeliveryTime;
 	}
 
@@ -58,7 +70,19 @@ public class WoodItem {
 	 * 
 	 * @return the price for 1 Bare Foot of this WoodItem
 	 */
-	public Double getPrice() {
+	public Double getPrice(String hardWoodType) {
+		if(hardWoodType.equals("Cherry"))
+			price=5.95;
+		else if(hardWoodType.equals("Curly Maple"))
+			price=6.00;
+		else if(hardWoodType.equals("Genuine Mahogany"))
+			price=9.60;
+		else if(hardWoodType.equals("Wenge"))
+			price=22.35;
+		else if(hardWoodType.equals("White Oak"))
+			price=6.70;
+		else if(hardWoodType.equals("Sawdust"))
+			price=1.5;
 		return price;
 	}
 

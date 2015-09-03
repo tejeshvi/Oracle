@@ -1,0 +1,48 @@
+(a) 8 commits
+(b) Date:   Thu Aug 20 18:05:41 2015
+(c) List:git log --stat --all --until='21 Aug 2015'
+.classpath
+.gitignore
+.project
+src/controller/HardWoodSeller.java
+src/model/WoodItem.java
+README.txt
+
+(d)WoodItem.java is changed 2 times and HardwoodSeller.java is changed once
+
+ $ git log --stat src/*
+
+commit d5700dd1e09dd1535802a72f6122c6852f6e0f56
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Mon Aug 24 12:07:05 2015 -0400
+
+    Fixed variable naming
+
+    Fixed spelling error on variable naming
+
+ src/model/WoodItem.java | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+commit e60a392cec6c7d73a108f47988245846c5d0a3ec
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Aug 20 18:05:41 2015 -0400
+
+    Project Template Created
+
+    Created template for Hardwood Seller program:
+    - WoodItem class defined with constructiors and getter methods. Blank
+    toString method
+    - Main class with empty methods for delivery time computation and input
+    file reading
+
+ src/controller/HardwoodSeller.java | 29 +++++++++++++++
+ src/model/WoodItem.java            | 74 ++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 103 insertions(+)
+
+(e) Git Log --> gives number of times the repository is commited and the details about it
+    Git Status --> gives the status of the repository to know if it is up to date. It tells the difference between the current repository 		  	   on the local machine and the repository on git hub account.
+(f) git log --follow ~path~/main.java
+		OR
+    git log --all --grep='main.java'
+(g) git log --all --grep='transaction' -i
+(h) git log --since="Jan 05 2014" --until="Jun 14 2015" --author='Lauren'
